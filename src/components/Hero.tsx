@@ -1,5 +1,9 @@
 import { Section } from '../App';
 
+// IMPORTS DE ASSETS (CLAVE)
+import heroImage from '../image/IMG_3329.jpeg';
+import heroVideo from '../image/9856372-hd_1920_1080_30fps.mp4';
+
 interface HeroProps {
   setCurrentSection: (section: Section) => void;
 }
@@ -12,10 +16,9 @@ export default function Hero({ setCurrentSection }: HeroProps) {
     >
       {/* FONDO */}
       <div className="absolute inset-0 z-0">
-
-        {/* IMAGEN FALLBACK (mobile + respaldo) */}
+        {/* IMAGEN FALLBACK */}
         <img
-          src="/IMG_3329.jpeg"
+          src={heroImage}
           alt="Mantenimiento Industrial"
           className="w-full h-full object-cover"
         />
@@ -27,13 +30,10 @@ export default function Hero({ setCurrentSection }: HeroProps) {
           muted
           playsInline
           preload="none"
-          poster="/IMG_3329.jpeg"
+          poster={heroImage}
           className="hidden sm:block absolute inset-0 w-full h-full object-cover"
         >
-          <source
-            src="9856372-hd_1920_1080_30fps.mp4"
-            type="video/mp4"
-          />
+          <source src={heroVideo} type="video/mp4" />
         </video>
 
         {/* OVERLAY */}

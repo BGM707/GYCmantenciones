@@ -36,7 +36,7 @@ export default function Header({ currentSection, setCurrentSection }: HeaderProp
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <img
-                src="/logo-e1727654075501.png"
+                src="src/image/logo-e1727654075501.png"
                 alt="GYC Mantención"
                 className="h-12 w-auto animate-pulse-heart hover:animate-none"
               />
