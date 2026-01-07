@@ -3,6 +3,7 @@ import { Section } from '../App';
 // IMPORTS DE ASSETS (CLAVE)
 import heroImage from '../image/IMG_3329.jpeg';
 import heroVideo from '../image/9856372-hd_1920_1080_30fps.mp4';
+import logo from '../image/logo-e1727654075501.png';
 
 interface HeroProps {
   setCurrentSection: (section: Section) => void;

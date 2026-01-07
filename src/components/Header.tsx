@@ -2,6 +2,9 @@ import { Menu, X, Shield } from 'lucide-react';
 import { useState } from 'react';
 import { Section } from '../App';
 
+// ✅ IMPORT CORRECTO DEL LOGO
+import logo from '../image/logo-e1727654075501.png';
+
 interface HeaderProps {
   currentSection: Section;
   setCurrentSection: (section: Section) => void;
@@ -26,17 +29,17 @@ export default function Header({ currentSection, setCurrentSection }: HeaderProp
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-md backdrop-blur-md bg-opacity-90 border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8 py-3">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex justify-between items-center h-20">
 
-          {/* LOGO + TEXTO */}
+          {/* LOGO */}
           <div className="flex-shrink-0">
             <button
               onClick={() => handleNavigation('inicio')}
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <img
-                src="src/image/logo-e1727654075501.png"
+                src={logo}
                 alt="GYC Mantención"
                 className="h-12 w-auto animate-pulse-heart hover:animate-none"
               />
