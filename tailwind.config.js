@@ -5,15 +5,21 @@ export default {
     extend: {
       keyframes: {
         pulseHeart: {
-          '0%, 100%': { transform: 'scale(1)' },
+          // El latido ocurre en el primer 30% del tiempo, el resto es calma
+          '0%, 30%, 100%': { transform: 'scale(1)' },
+          '10%': { transform: 'scale(1.12)' },
           '20%': { transform: 'scale(1.05)' },
-          '40%': { transform: 'scale(1)' },
-          '60%': { transform: 'scale(1.08)' },
-          '80%': { transform: 'scale(1)' },
+          '25%': { transform: 'scale(1.18)' },
         },
+        'infinite-scroll': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
       },
       animation: {
-        'pulse-heart': 'pulseHeart 1.8s ease-in-out infinite',
+        // Aumentamos a 2.5s para que no sea estresante
+        'pulse-heart': 'pulseHeart 2.5s ease-in-out infinite',
+        'infinite-scroll': 'infinite-scroll 30s linear infinite',
       },
     },
   },
