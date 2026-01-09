@@ -10,6 +10,7 @@
     background-size: 40px 40px;
   }
 
+  /* === ANIMACIONES EXISTENTES (las tuyas) === */
   @keyframes slide-in-from-top-full {
     from {
       transform: translateY(-20px);
@@ -32,24 +33,45 @@
     }
   }
 
+  /* === NUEVAS ANIMACIONES PARA TRANSICIÓN ENTRE SECCIONES === */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-right-10 {
+    from {
+      transform: translateX(40px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Clases base para animaciones */
   .animate-in {
     animation-fill-mode: both;
   }
 
-  .slide-in-from-top {
-    animation-name: slide-in-from-top-full;
+  .fade-in {
+    animation-name: fade-in;
   }
 
-  .slide-in-from-bottom-5 {
-    animation-name: slide-in-from-bottom-5;
+  .slide-in-from-right-10 {
+    animation-name: slide-in-from-right-10;
+  }
+
+  /* === DURACIONES Y DELAYS (las tuyas + las nuevas) === */
+  .duration-200 {
+    animation-duration: 200ms;
   }
 
   .duration-300 {
     animation-duration: 300ms;
-  }
-
-  .duration-200 {
-    animation-duration: 200ms;
   }
 
   .duration-500 {
@@ -58,6 +80,11 @@
 
   .duration-700 {
     animation-duration: 700ms;
+  }
+
+  /* Nueva duración recomendada para la transición de secciones */
+  .duration-600 {
+    animation-duration: 600ms;
   }
 
   .delay-100 {
