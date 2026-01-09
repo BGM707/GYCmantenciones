@@ -17,7 +17,7 @@ export default function Header({ currentSection, setCurrentSection }: HeaderProp
     { name: 'Inicio', id: 'inicio' as Section },
     { name: 'Servicios', id: 'servicios' as Section },
     { name: 'Nosotros', id: 'nosotros' as Section },
-    { name: 'Trabaja con Nosotros', id: 'postulaciones' as Section },
+    { name: 'Noticias', id: 'noticias' as Section }, // Reemplazado aquí
     { name: 'Políticas', id: 'politicas' as Section },
     { name: 'Contacto', id: 'contacto' as Section },
   ];
@@ -43,7 +43,6 @@ export default function Header({ currentSection, setCurrentSection }: HeaderProp
                 alt="GYC Mantención"
                 className="h-12 w-auto animate-pulse-heart hover:animate-none"
               />
-
               <span className="hidden sm:block text-2xl font-bold bg-gradient-to-r from-blue-900 to-blue-700 bg-clip-text text-transparent">
                 GYC Mantención
               </span>
